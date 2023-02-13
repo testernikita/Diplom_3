@@ -37,19 +37,19 @@ public class HomePage {
 
 
     // Метод для нажатия на вкладку "Булки"
-    @Step("Нажимает на вкладку 'Булки'")
+    @Step("Нажать на вкладку \"Булки\"")
     public void clickBunsTab() {
         spanBunsTab.shouldBe(visible).doubleClick();
     }
 
     // Метод для нажатия на вкладку "Соусы"
-    @Step("Нажимает на вкладку 'Соусы'")
+    @Step("Нажать на вкладку \"Соусы\"")
     public void clickSauceTab() {
         spanSauceTab.shouldBe(visible).click();
     }
 
     // Метод для нажатия на вкладку "Начинки"
-    @Step("Нажимает на вкладку 'Начинки'")
+    @Step("Нажать на кнопку \"Начинки\"")
     public void clickFillingTab() {
         spanFillingTab.shouldBe(visible).click();
     }
@@ -60,26 +60,26 @@ public class HomePage {
     }
 
     // Метод для нажатия на кнопку "Личный кабинет"
-    @Step("Нажимает на кнопку 'Личный кабинет'")
-    public HomePage clickPersonalAreaButtonInHeader() {
+    @Step("Нажать на кнопку \"Личный кабинет\"")
+    public HomePage clickPersonalAccountButtonHeader() {
         buttonPersonalArea.click();
         return this;
     }
 
     // Метод для нажатия на кропку "Войти в аккаунт" в шапке
-    @Step("Нажимает на кнопку 'Войти в аккаунт'")
+    @Step("Нажать на кнопку \"Войти в аккаунт\"")
     public void clickLoginButton() {
         buttonLogin.click();
     }
 
     // Метод для проверки видимости кнопки на странице
-    @Step("Проверяет текст на кнопке")
+    @Step("Проверить текст на кнопке")
     public boolean checkButtonVisible(String buttonText) {
         return $(By.xpath("//button[contains(text(), '" + buttonText + "')]")).shouldBe(visible).exists();
     }
 
     // Метод для проверки значения отображаемого заголовка на странице
-    @Step("Проверяет заголовок на странице")
+    @Step("Проверить заголовок на странице")
     public boolean checkHeaderVisible(String headerText) {
         return $(By.xpath("//h1[contains(text(), '" + headerText + "')]")).shouldBe(visible).exists();
     }

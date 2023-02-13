@@ -43,7 +43,7 @@ public class LoginTests extends BaseTests {
     }
 
     @Test
-    @DisplayName("Вход по кнопке «Войти в аккаунт» на главной")
+    @DisplayName("Вход по кнопке \"Войти в аккаунт\" на главной")
     @Description("Пользователь может осуществить вход в свой аккаунт, нажав на кнопку \"Войти в аккаунт\" на главной странице")
     public void checkingLoginByClickOnTheButtonOnTheMainPage() {
         final String buttonText = "Оформить заказ";
@@ -57,13 +57,13 @@ public class LoginTests extends BaseTests {
     }
 
     @Test
-    @DisplayName("Вход через кнопку «Личный кабинет»")
+    @DisplayName("Вход через кнопку \"Личный кабинет\"")
     @Description("Пользователь может осуществить вход в свой аккаунт, нажав на кнопку \"Личный кабинет\" на главной странице")
     public void checkingLoginThroughPersonalArea() {
         final String buttonText = "Оформить заказ";
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
-        homePage.clickPersonalAreaButtonInHeader();
+        homePage.clickPersonalAccountButtonHeader();
 
         LoginPage loginPageForm = page(LoginPage.class);
         loginPageForm.successfulFillLoginForm(user.email, user.password).clickLoginButton();
@@ -73,7 +73,7 @@ public class LoginTests extends BaseTests {
 
     @Test
     @DisplayName("Вход через кнопку в форме регистрации")
-    @Description("Пользователь может осуществить вход в свой аккаунт, нажав на кнопку 'Войти' на странице регистрации")
+    @Description("Пользователь может осуществить вход в свой аккаунт, нажав на кнопку \"Войти\" на странице регистрации")
     public void checkingLoginFromRegistrationPage() {
         final String buttonText = "Оформить заказ";
 
@@ -90,8 +90,8 @@ public class LoginTests extends BaseTests {
 
     @Test
     @DisplayName("Вход через кнопку в форме восстановления пароля")
-    @Description("Пользователь может осуществить вход в свой аккаунт нажав на кнопку кнопку 'Войти' на странице восстановления пароля")
-    public void checkingLoginFromForgotPasswordPage() {
+    @Description("Пользователь может осуществить вход в свой аккаунт нажав на кнопку кнопку \"Войти\" на странице восстановления пароля")
+    public void checkingLoginFromRecoveryPasswordPage() {
         final String buttonText = "Оформить заказ";
 
         RecoveryPasswordPage recoveryPasswordPage = open(RecoveryPasswordPage.URL, RecoveryPasswordPage.class);

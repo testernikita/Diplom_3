@@ -13,7 +13,7 @@ public class RecoveryPasswordPage {
     private SelenideElement buttonLogin;
 
     // Метод для нажатия на кнопку "Войти"
-    @Step("Клик по кнопке 'Войти'")
+    @Step("Нажать на кнопку \"Войти\"")
     public RecoveryPasswordPage clickRecoveryButton() {
         buttonLogin.click();
         return this;

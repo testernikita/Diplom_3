@@ -17,7 +17,7 @@ import site.nomoreparties.stellarburgers.utils.UserCredentials;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 
-public class RegistrationTest extends BaseTest {
+public class RegistrationTests extends BaseTests {
     private UserClient userClient;
     private User user;
     private String userToken;

@@ -7,7 +7,7 @@ package site.nomoreparties.stellarburgers;
 
         import static com.codeborne.selenide.WebDriverRunner.setWebDriver;
 
-public class BaseTest {
+public class BaseTests {
     ChromeDriver driver;
 
     @Before
